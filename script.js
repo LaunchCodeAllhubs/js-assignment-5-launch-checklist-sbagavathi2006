@@ -5,7 +5,6 @@ window.addEventListener("load", function() {
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event){
         event.preventDefault();
-        
 
         // Get user input values
         let pilotNameInput = document.querySelector("input[name=pilotName]");
