@@ -14,15 +14,15 @@ window.addEventListener("load", function() {
         let cargoMassInput = document.querySelector("input[name=cargoMass]");
         let list= document.getElementById("faultyItems");
         // alert(list.value);
-        list.style.visibility = "hidden";
+        list.style.visibility = 'hidden';
 
         //check all fields are filled
         if (validateInput(pilotNameInput.value) === 'Empty'|| validateInput(coPilotNameInput.value) === 'Empty'|| 
         validateInput(fuelLevelInput.value) === 'Empty'||validateInput(cargoMassInput.value) === 'Empty') {
             alert('All fields are required');
-            launchStatus.innerHTML = "Awaiting Information Before Launch";
+            launchStatus.innerHTML = 'Awaiting Information Before Launch';
             launchStatus.style.color = 'rgb(0, 0, 0)';
-            //list.style.visibility = 'hidden';
+            list.style.visibility = 'hidden';
         }
         //check that fuelLevel and cargoLevel are numbers and pilot and co-pilot are strings
         else if (
@@ -31,9 +31,9 @@ window.addEventListener("load", function() {
         validateInput(pilotNameInput.value)==='Is a Number'||
         validateInput(coPilotNameInput.value)==='Is a Number') {
             alert(`Please enter text for names and numbers for fuel and cargo.`);
-            launchStatus.innerHTML = "Awaiting Information Before Launch";
+            launchStatus.innerHTML = 'Awaiting Information Before Launch';
             launchStatus.style.color = 'rgb(0, 0, 0)';
-            //list.style.visibility = 'hidden';
+            list.style.visibility = 'hidden';
         }else{
         formSubmission(document,list,pilotNameInput.value,coPilotNameInput.value,fuelLevelInput.value,cargoMassInput.value);
         }
