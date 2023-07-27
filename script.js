@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
             alert('All fields are required');
             launchStatus.innerHTML = "Awaiting Information Before Launch";
             launchStatus.style.color = 'rgb(0, 0, 0)';
-            list.style.visibility = 'hidden';
+            //list.style.visibility = 'hidden';
         }
         //check that fuelLevel and cargoLevel are numbers and pilot and co-pilot are strings
         else if (
@@ -33,7 +33,7 @@ window.addEventListener("load", function() {
             alert(`Please enter text for names and numbers for fuel and cargo.`);
             launchStatus.innerHTML = "Awaiting Information Before Launch";
             launchStatus.style.color = 'rgb(0, 0, 0)';
-            list.style.visibility = 'hidden';
+            //list.style.visibility = 'hidden';
         }else{
         formSubmission(document,list,pilotNameInput.value,coPilotNameInput.value,fuelLevelInput.value,cargoMassInput.value);
         }
